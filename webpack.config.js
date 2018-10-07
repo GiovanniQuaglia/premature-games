@@ -2,6 +2,10 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+  mode: 'development',
+  entry: {
+      'single-spa.config': './src/single-spa.config.js',
+  },
   module: {
     rules: [
       {
