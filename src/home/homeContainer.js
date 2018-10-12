@@ -3,24 +3,57 @@ import styled from 'styled-components';
 
 import Navbar from './navbar';
 import GameBox from './gameBox';
+import gamesList from './gamesList';
 
 class Home extends React.Component {
+
+  displayGames(games) {
+    const isOdd = games.length % 2 === 1 ? true : false;
+    return (
+      games.map((game, index) => {
+        if (index === games.length - 1 && isOdd) {
+          return (
+            <React.Fragment key={index + 2}>
+              <GameBox gameTitle={game.title} underTitle={game.subtitle} key={index}/>
+              <GameBox gameTitle='cazzo' underTitle='culo' key={index + 1} odd/>
+            </React.Fragment>
+          )       
+        }
+        return <GameBox gameTitle={game.title} underTitle={game.subtitle} key={index}/>
+      })
+    )
+  }
+  
   render(){
+    const games = gamesList
     return(
-      <div>
+      <HomeWrapper>
         <Navbar />
         <BodyWrapper>
-          <GameBox gameTitle='The Wolf In The Wood' underTitle='Live the life of a Wolf in the forest'/>
-          <GameBox gameTitle='Laika' underTitle='Space is beautiful from here'/>
-          <GameBox gameTitle='Napoleon' underTitle='Live the last days of Napoleon in St. Helen'/>
+          <FlexBody>
+            {this.displayGames(games)}
+          </FlexBody>
         </BodyWrapper>
-      </div>
+      </HomeWrapper>
     )
   }
 }
 
+const HomeWrapper = styled.div`
+  text-align: center;
+`;
+
 const BodyWrapper = styled.div`
-  padding: 0 45px 0 45px;
+  display: inline-block;
+`;
+
+const FlexBody = styled.ul`
+  padding: 0 24px 0 24px;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
 `;
 
 export default Home;

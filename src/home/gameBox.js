@@ -1,9 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components'
 
 const GameBox = (props) => {
   return(
-      <Box>
+      <Box odd={props.odd}>
         <GameImage></GameImage>
         <TitleBox>
           <Title>{props.gameTitle}</Title>
@@ -13,10 +13,14 @@ const GameBox = (props) => {
     )
 }
 
-const Box = styled.div`
+const Box = styled.li`
   width: 300px;
   margin: 40px 24px 8px 24px;
-  display: inline-block;
+  
+  ${props => props.odd && css`
+    visibility: hidden;
+    @media only screen and (max-width: 744px) {display: none;}
+  `}
 `;
 
 const GameImage = styled.div`
@@ -28,6 +32,7 @@ const GameImage = styled.div`
 
 const TitleBox = styled.div`
   width: 100%;
+  text-align: left;
 `;
 
 const Title = styled.p`
