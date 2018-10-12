@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Home from './home/homeContainer.js';
+
 const App = () => {
   return (
     <div>
-      <p>It works!</p>
+      <Home />
     </div>
   );
 };
