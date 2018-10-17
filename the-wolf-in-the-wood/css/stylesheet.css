@@ -1,0 +1,92 @@
+
+body {
+    background-color: #143545;
+}
+
+canvas {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 420px;
+    height: 380px;
+}
+
+#textBox {
+    font-size: 18px;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding-top: 40px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 420px;
+    height: 380px;
+}
+
+#titleWrapper {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 420px;
+    height: 420px;
+}
+
+#title {
+    font-size: 24px;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding-top: 180px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 420px;
+    height: 380px;
+}
+
+#startButton {
+    font-size: 18px;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    padding-top: 40px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#instructions {
+    font-size: 18px;
+    font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 420px;
+    height: 380px;
+    opacity: 1;
+    transition: 0.8s opacity;
+}
