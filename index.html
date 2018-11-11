@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>Premature Games</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" 
@@ -10,47 +10,76 @@
       href="sprites/favicon.png" />
 </head>
 <body>
-  <div id='main-container'>
-    <div id='navbar'>
-      <h1 id='logo'>
-        Premature Games
-      </h1>
+  <div id='titleBox'>
+    <div class='titleLine'>
+      <span>P</span>
+      <span>R</span>
+      <span>E</span>
+      <span>M</span>
+      <span>A</span>
+      <span>T</span>
+      <span>U</span>
+      <span>R</span>
+      <span>E</span>
     </div>
-    <div id='body-container'>
-      <ul id='list'>
-        <li class='game-container'>
-          <a href="./laika/game.html">
-            <div class='game-image' id='laika-img'></div>
-          </a>
-          <a href="./laika/game.html">
-            <h2 class='game-title'>
-              Laika
-            </h2>
-          </a>          
-            <p class='game-description'>
-              Space is beautiful from here
-            </p>
-          </a>
-        </li>
-        <li class='game-container'>
-          <a href="./the-wolf-in-the-wood/game.html">
-            <div class='game-image' id='wolf-img'></div>
-          </a>
-          <a href="./the-wolf-in-the-wood/game.html">
-            <h2 class='game-title'>
-              The Wolf In The Wood
-            </h2>
-          </a>          
-            <p class='game-description'>
-              Live the life of a Wolf in the forest
-            </p>
-          </a>
-        </li>
-        <li id='game-faker'>
-        </li>
-      </ul>
+    <br/>
+    <div class='titleLineGame'>
+      <span>G</span>
+      <span>A</span>
+      <span>M</span>
+      <span>E</span>
+      <span>S</span>
     </div>
-    <p id='signature'>Created by Giovanni Quaglia</p>
   </div>
+  <div class='game'>
+    <div id='asteroidContainer'>
+      <a href="./laika/game.html">
+      <div id='asteroidSubCont'>
+      <div id='asteroidBackUno' class='asteroideLuce'></div>
+      <div id='asteroidBackDue' class='asteroideOmbra'></div>
+      <div id='asteroidBackTre' class='asteroideOmbra'></div>
+      <div id='asteroid' class='asteroideOmbra'>
+        <div id='asteroidLight' class='asteroideLuce'></div>
+        <div id='cratereUnoUno' class='asteroideLuce'></div>
+        <div id='cratereUnoDue' class='asteroideOmbra'></div>
+        <div id='cratereUnoTre' class='asteroideLuce'></div>
+        <div id='cratereDueOmbra' class='asteroideOmbra'></div>
+        <div id='cratereDueLuce' class='asteroideLuce'></div>
+        <div id='cratereDueTre' class='asteroideOmbra'></div>
+        <div id='cratereMini' class='asteroideOmbra'></div>
+        <div id='cratereMiniDue' class='asteroideOmbra'></div>
+        <div id='cratereMiniTre' class='asteroideOmbra'></div>
+        <div id='cratereMiniQuattro' class='asteroideOmbra'></div>
+        <div id='cratereMiniCinque' class='asteroideOmbra'></div>
+        <div id='cratereTreUno' class='asteroideOmbra'></div>
+        <div id='cratereTreDue' class='asteroideLuce'></div>
+      </div>
+      </div>
+      </a>
+    </div>
+    <span class='gameTitleLaika'>LAIKA</span>
+  </div>
+  <div class='game'>
+    <div id='treeContainer'>
+      <a href="./the-wolf-in-the-wood/game.html">
+        <div id='treeSubCont'>
+          <div id='groundLeft'></div>
+          <div id='groundRight'></div>
+          <div class='treeTopContainer' id='soil'>
+            <div class='treeBottom'></div>
+          </div>
+          <div class='treeTopContainer'>
+            <div class='treeTop'></div>
+          </div>
+        </div>
+      </a>
+      </div>
+    <span id='gameTitleWolf'>THE WOLF IN THE WOOD</span>
+  </div>
+  <footer>
+    <span>
+      Made by Giovanni Quaglia
+    </span>
+  </footer>
 </body>
 </html>

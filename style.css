@@ -1,114 +1,416 @@
 body {
   margin: 0;
-}
-
-#main-container {
   text-align: center;
 }
 
-#navbar {
-  background-color: black;
-  text-align: left;
+#titleBox {
+  height: 140px;
+  width: fit-content;
+  position: relative;
+  display: inline-block;
+  margin-top: 80px;
+  text-align: center;
+  z-index: -5;
 }
 
-#logo {
-  padding: 24px 0 24px 45px;
-  margin: 0;
-  color: white;
+.titleLine {
+  display: inline-block;
+}
+
+.titleLineGame {
+  display: inline-block;
+}
+
+.titleLine > span {
   font-family: Futura;
   font-weight: 100;
-  font-size: 36px;
+  font-size: 3.5vw;
+  float:left;
+  transform: rotate(45deg);
+  margin-right: 0.4em;
+  margin-left: 0.4em;
+  
 }
 
-@media only screen and (max-width: 619px) {
-  #navbar {
-    text-align: inherit;
+.titleLineGame > span {
+  font-family: Futura;
+  font-weight: 100;
+  font-size: 3.5vw;
+  float:left;
+  transform: rotate(-45deg);
+  margin-right: 0.4em;
+  margin-left: 0.4em;
+}
+
+@media only screen and (min-width: 415px) {
+  .titleLine > span {
+    font-size: 2vw;
   }
-  #logo {
-    padding-left: 0;
+  .titleLineGame > span {
+    font-size: 2vw;
   }
 }
 
-#list {
-  list-style: none; 
-}
-
-#body-container {
-  display: inline-block;
-  padding: 0 24px 0 24px;
-}
-
-#list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-content: flex-start;
-  padding-left: 0;
-}
-
-.game-container {
-  width: 250px;
-  margin: 40px 18px 8px 18px;
-  text-align: left;
-}
-
-.game-image {
+.game {
   width: 100%;
-  height: 155px;
-  overflow: hidden;
-  background-color: tomato;
+  height: 300px;
+  text-align: center;
 }
 
-#laika-img {
-  background: url('./thumbnails/LaikaThumbnail.png') 0 0 no-repeat;
+#asteroidContainer {
+  display: inline-block;
+  position: relative;
 }
 
-#wolf-img {
-  background: url('./thumbnails/WolfThumbnail.png') 0 0 no-repeat;
+#asteroidContainer:hover {
+  z-index: 3;
+  -webkit-animation:spin 7s linear infinite;
+  -moz-animation:spin 7s linear infinite;
+  animation:spin 7s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+#asteroidContainer:hover .asteroideOmbra {
+  background-color: #949FAC;
 }
 
-.game-title {
-  font-size: 21px;
-  font-weight: 400;
-  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-  margin: 18px 0 0 0;
+#asteroidContainer:hover .asteroideLuce {
+  background-color: #e1e6ee;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+#asteroidContainer:hover ~ .gameTitleLaika {
+  color: #000;
 }
 
-a:visited {
-  color: black;
+.asteroideOmbra {
+  background-color: #909090;
 }
 
-.game-description {
-  font-size: 14px;
-  font-weight: 200;
-  color: #8c9192;
-  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-  margin: 8px 0 0 0;
+.asteroideLuce {
+  background-color: #e7e7e7;
 }
 
-#game-faker {
-  width: 250px;
-  margin: 0 18px 0 18px;
-}
-
-@media only screen and (min-width: 905px) {
-  #game-faker {
-    display: none;
-  }
-}
-
-#signature {
-  font-size: 10px;
-  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-  color: #8c9192;
+#asteroidBackUno {
+  height: 80px;
+  width: 60px;
+  border-radius: 50%;
   position: absolute;
-  margin-top: 48px;
-  left: 0;
-  right: 0;
-  bottom: 8px;
+  top: 2px;
+  left: 7px;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+#asteroidBackDue {
+  height: 70px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -17px;
+  right: 64px;
+  transform: rotate(81deg);
+}
+
+#asteroidBackTre {
+  height: 70px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 45px;
+  right: -12px;
+  transform: rotate(-5deg);
+}
+
+#asteroid {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#asteroidLight {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  position: absolute;
+  left: -30px;
+  top: -30px;
+}
+
+#cratereUnoUno {
+  height: 60px;
+  width: 47px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 60px;
+  right: 22px;
+  transform: rotate(27deg);
+}
+
+#cratereUnoDue {
+  height: 52px;
+  width: 45px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 65px;
+  right: 25px;
+  transform: rotate(27deg);
+}
+
+#cratereUnoTre {
+  height: 37px;
+  width: 27px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 68px;
+  right: 24px;
+  transform: rotate(25deg);
+}
+
+#cratereDueOmbra {
+  height: 47px;
+  width: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 3px;
+  right: 93px;
+  transform: rotate(83deg);
+}
+
+#cratereDueLuce {
+  height: 35px;
+  width: 21px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 9px;
+  right: 102px;
+  transform: rotate(83deg);
+}
+
+#cratereDueTre {
+  height: 33px;
+  width: 19px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 16px;
+  right: 103px;
+  transform: rotate(83deg);
+}
+
+#cratereMini {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 28px;
+  right: 75px;
+}
+
+#cratereMiniDue {
+  height: 25px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 116px;
+  right: 19px;
+}
+
+#cratereMiniTre {
+  height: 30px;
+  width: 25px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 11px;
+  right: 136px;
+  transform: rotate(90deg);
+}
+
+#cratereMiniQuattro {
+  height: 30px;
+  width: 25px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 37px;
+  right: 53px;
+  transform: rotate(90deg);
+}
+
+#cratereMiniCinque {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 150px;
+  right: 22px;
+}
+
+#cratereTreUno {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 58px;
+  right: 90px;
+}
+
+#cratereTreDue {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 55px;
+  right: 88px;
+}
+
+.gameTitleLaika {
+  display: block;
+  display: block;
+  margin-top: 30px;
+  font-size: 1.5em;
+  font-family: impact;
+  color: #fff;
+}
+
+#treeContainer {
+  display: inline-block;
+  position: relative;
+}
+
+#treeContainer:hover .treeTop {
+  border-bottom-color:#72A965;
+}
+
+#treeContainer:hover .treeTop:after {
+  border-top-color:#72A965;
+}
+
+#treeContainer:hover .treeBottom {
+  border-bottom-color:#9B7B66;
+}
+
+#treeContainer:hover .treeBottom:after {
+  border-top-color:#B38E6A;
+}
+
+#treeContainer:hover #groundLeft {
+  background-color:#B38E6A;
+}
+
+#treeContainer:hover #groundRight {
+  background-color:#9B7B66;
+}
+
+#treeContainer:hover {
+  -webkit-animation: action 1s infinite  alternate;
+  animation: action 1s infinite  alternate;
+}
+@-webkit-keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
+}
+@keyframes action {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-30px); }
+}
+
+#treeSubCont {
+  position: absolute;
+  left: 70px;
+}
+
+.treeTopContainer {
+  transform: rotate(90deg);
+  position: absolute;
+  z-index: 3;
+}
+
+#soil {
+  top: 84px;
+}
+
+.treeTop {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 110px solid #b2b2b2;
+  position: relative;
+  top: -90px;
+  z-index: 4;
+}
+.treeTop:after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 110px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 110px solid #b2b2b2;
+  z-index: 4;
+}
+
+#groundLeft {
+  background-color: #dbdbdb;
+  height: 84px;
+  width: 110px;
+  top: 80px;
+  position: absolute;
+  left: -50px;
+  z-index: 1;
+}
+
+#groundRight {
+  background-color: #878787;
+  height: 84px;
+  width: 110px;
+  top: 80px;
+  position: absolute;
+  left: 60px;
+  z-index: 1;
+}
+
+.treeBottom {
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-bottom: 110px solid #878787;
+  position: relative;
+  top: -90px;
+}
+.treeBottom:after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 110px;
+  width: 0;
+  height: 0;
+  border: 50px solid transparent;
+  border-top: 110px solid #dbdbdb;
+}
+
+#gameTitleWolf {
+  color: #fff;
+  font-size: 1.2em;
+  top: 250px;
+  position: relative;
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
+#treeContainer:hover ~ #gameTitleWolf {
+  color: black;
+}
+
+footer {
+  margin: 48px 0 24px 0;
+}
+
+footer > span {
+  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  font-size: 0.7em;
+  padding: 24px;
 }
