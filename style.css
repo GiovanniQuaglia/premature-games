@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'silkscreennormal';
+  src: url('./fonts/slkscre-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   text-align: center;
@@ -47,6 +54,81 @@ body {
   height: 300px;
   text-align: center;
 }
+
+#gameTitleTetrandom {
+  font-family: 'silkscreennormal';
+  text-align: center;
+  font-size: 24px;
+  font-size: 1.5em;
+  color: #909090;
+}
+
+#tetrandomContainer {
+  display: inline-block;
+  position: relative;
+}
+
+#tetrandomContainer:hover {
+  -webkit-animation: rotate-center 5s steps(4, end) infinite both;
+	animation: rotate-center 5s steps(4, end) infinite both;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#tetrandomContainer:hover .tetrandomSquare {
+  background-color: #000;
+}
+
+#tetrandomContainer:hover ~ #gameTitleTetrandom {
+  color: #000;
+}
+
+.tetrandomSquare  {
+  display: inherit;
+  width: 45px;
+  height: 45px;
+  background-color: #878787;
+}
+
+#tetrandomSubCont {
+  width: 135px;
+  height: 135px;
+}
+
+#tetrandomSubCont > span {
+  position: absolute;
+}
+
+#tetrandomSubCont > span:nth-child(1) {
+  margin-left: 45px;
+}
+
+#tetrandomSubCont > span:nth-child(3) {
+  margin: 45px 0 0 45px;
+}
+
+#tetrandomSubCont > span:nth-child(4) {
+  margin: 90px;
+} 
 
 #asteroidContainer {
   display: inline-block;
@@ -264,7 +346,7 @@ body {
   margin-top: 30px;
   font-size: 1.5em;
   font-family: impact;
-  color: #fff;
+  color: #909090;
 }
 
 #treeContainer {
@@ -385,7 +467,7 @@ body {
 }
 
 #gameTitleWolf {
-  color: #fff;
+  color: #909090;
   font-size: 1.2em;
   top: 250px;
   position: relative;
