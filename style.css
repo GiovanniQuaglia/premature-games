@@ -30,23 +30,36 @@ body {
 
 .titleLine > span {
   font-family: Futura;
-  font-weight: 100;
+  font-weight: 900;
   font-size: 24px;
   float:left;
   transform: rotate(45deg);
   margin-right: 0.4em;
   margin-left: 0.4em;
-  
 }
 
 .titleLineGame > span {
   font-family: Futura;
-  font-weight: 100;
+  font-weight: 900;
   font-size: 24px;
   float:left;
   transform: rotate(-45deg);
   margin-right: 0.4em;
   margin-left: 0.4em;
+}
+
+@media (min-width: 600px) {
+  .titleLine > span {
+    font-size: 36px;
+  }
+  .titleLineGame > span {
+    font-size: 36px;
+    margin-bottom: 80px;
+  }
+}
+
+a {
+  text-decoration: none;
 }
 
 .game {
@@ -60,7 +73,8 @@ body {
   text-align: center;
   font-size: 24px;
   font-size: 1.5em;
-  color: #909090;
+  color: #595959;
+  margin: 0;
 }
 
 #tetrandomContainer {
@@ -106,12 +120,13 @@ body {
   display: inherit;
   width: 45px;
   height: 45px;
-  background-color: #878787;
+  background-color: #595959;
 }
 
 #tetrandomSubCont {
   width: 135px;
   height: 135px;
+  margin: 24px;
 }
 
 #tetrandomSubCont > span {
@@ -158,11 +173,11 @@ body {
 }
 
 .asteroideOmbra {
-  background-color: #909090;
+  background-color: #868686;
 }
 
 .asteroideLuce {
-  background-color: #e7e7e7;
+  background-color: #e0e0e0;
 }
 
 #asteroidBackUno {
@@ -346,7 +361,7 @@ body {
   margin-top: 30px;
   font-size: 1.5em;
   font-family: impact;
-  color: #909090;
+  color: #595959;
 }
 
 #treeContainer {
@@ -410,7 +425,7 @@ body {
   width: 0;
   height: 0;
   border: 50px solid transparent;
-  border-bottom: 110px solid #b2b2b2;
+  border-bottom: 110px solid #b3b3b3;
   position: relative;
   top: -90px;
   z-index: 4;
@@ -423,12 +438,12 @@ body {
   width: 0;
   height: 0;
   border: 50px solid transparent;
-  border-top: 110px solid #b2b2b2;
+  border-top: 110px solid #b3b3b3;
   z-index: 4;
 }
 
 #groundLeft {
-  background-color: #dbdbdb;
+  background-color: #e0e0e0;
   height: 84px;
   width: 110px;
   top: 80px;
@@ -438,7 +453,7 @@ body {
 }
 
 #groundRight {
-  background-color: #878787;
+  background-color: #868686;
   height: 84px;
   width: 110px;
   top: 80px;
@@ -451,7 +466,7 @@ body {
   width: 0;
   height: 0;
   border: 50px solid transparent;
-  border-bottom: 110px solid #878787;
+  border-bottom: 110px solid #868686;
   position: relative;
   top: -90px;
 }
@@ -463,11 +478,11 @@ body {
   width: 0;
   height: 0;
   border: 50px solid transparent;
-  border-top: 110px solid #dbdbdb;
+  border-top: 110px solid #e0e0e0;
 }
 
 #gameTitleWolf {
-  color: #909090;
+  color: #595959;
   font-size: 1.2em;
   top: 250px;
   position: relative;
@@ -483,7 +498,71 @@ footer {
 }
 
 footer > span {
-  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  font-family: Futura;
   font-size: 0.7em;
   padding: 24px;
 }
+
+.icons8-twitter { 
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48ZyBpZD0ic3VyZmFjZTEiPjxwYXRoIHN0eWxlPSIgZmlsbDojMDNBOUY0OyIgZD0iTSA0MiAxMi40Mjk2ODggQyA0MC42NzU3ODEgMTMuMDE1NjI1IDM5LjI1MzkwNiAxMy40MDYyNSAzNy43NTM5MDYgMTMuNTg5ODQ0IEMgMzkuMjc3MzQ0IDEyLjY4MzU5NCA0MC40NTMxMjUgMTEuMjM4MjgxIDQxLjAwMzkwNiA5LjUzMTI1IEMgMzkuNTc0MjE5IDEwLjM3MTA5NCAzNy45OTIxODggMTAuOTg0Mzc1IDM2LjMxMjUgMTEuMzA4NTk0IEMgMzQuOTY4NzUgOS44ODI4MTMgMzMuMDUwNzgxIDkgMzAuOTI1NzgxIDkgQyAyNi44NDc2NTYgOSAyMy41MzkwNjMgMTIuMjc3MzQ0IDIzLjUzOTA2MyAxNi4zMjAzMTMgQyAyMy41MzkwNjMgMTYuODkwNjI1IDIzLjYwNTQ2OSAxNy40NDkyMTkgMjMuNzMwNDY5IDE3Ljk4ODI4MSBDIDE3LjU5Mzc1IDE3LjY4MzU5NCAxMi4xNDg0MzggMTQuNzY1NjI1IDguNTA3ODEzIDEwLjMzNTkzOCBDIDcuODY3MTg4IDExLjQxNzk2OSA3LjUwNzgxMyAxMi42ODM1OTQgNy41MDc4MTMgMTQuMDIzNDM4IEMgNy41MDc4MTMgMTYuNTYyNSA4LjgwODU5NCAxOC44MDA3ODEgMTAuNzkyOTY5IDIwLjExNzE4OCBDIDkuNTgyMDMxIDIwLjA4MjAzMSA4LjQ0MTQwNiAxOS43NDIxODggNy40NDUzMTMgMTkuMjAzMTI1IEMgNy40NDUzMTMgMTkuMjI2NTYzIDcuNDQ1MzEzIDE5LjI1NzgxMyA3LjQ0NTMxMyAxOS4yODkwNjMgQyA3LjQ0NTMxMyAyMi44Mzk4NDQgOS45OTIxODggMjUuNzk2ODc1IDEzLjM2NzE4OCAyNi40NzI2NTYgQyAxMi43NSAyNi42NDA2MjUgMTIuMDk3NjU2IDI2LjczNDM3NSAxMS40MjU3ODEgMjYuNzM0Mzc1IEMgMTAuOTQ5MjE5IDI2LjczNDM3NSAxMC40ODQzNzUgMjYuNjc5Njg4IDEwLjAzNTE1NiAyNi41OTc2NTYgQyAxMC45NzI2NTYgMjkuNSAxMy42OTkyMTkgMzEuNjIxMDk0IDE2LjkzMzU5NCAzMS42ODM1OTQgQyAxNC40MDIzNDQgMzMuNjQ0NTMxIDExLjIxODc1IDM0LjgyMDMxMyA3Ljc1NzgxMyAzNC44MjAzMTMgQyA3LjE2MDE1NiAzNC44MjAzMTMgNi41NzQyMTkgMzQuNzg1MTU2IDUuOTk2MDk0IDM0LjcxNDg0NCBDIDkuMjY5NTMxIDM2Ljc4NTE1NiAxMy4xNTIzNDQgMzggMTcuMzIwMzEzIDM4IEMgMzAuOTA2MjUgMzggMzguMzM5ODQ0IDI2Ljg0Mzc1IDM4LjMzOTg0NCAxNy4xNjQwNjMgQyAzOC4zMzk4NDQgMTYuODQ3NjU2IDM4LjMyODEyNSAxNi41MzEyNSAzOC4zMTI1IDE2LjIyMjY1NiBDIDM5Ljc2MTcxOSAxNS4xOTUzMTMgNDEuMDExNzE5IDEzLjkwNjI1IDQyIDEyLjQyOTY4OCAiPjwvcGF0aD48L2c+PC9zdmc+') 50% 50% no-repeat;
+  background-size: 100%;
+}
+
+#twitter {
+  fill: #868686;
+}
+
+#twitterLink:hover #twitter{
+  fill: #03A9F4;
+}
+
+#social>a {
+  margin: 0 10px 0 10px
+}
+
+#octoHead {
+  fill: #595959;
+}
+
+#gitLink:hover #octoHead{
+  fill: #455A64;
+}
+
+#octoFace {
+  fill: #c9c9c9;
+}
+
+#gitLink:hover #octoFace {
+  fill: #FFCCBC;
+}
+
+#octoEyes {
+  fill: #595959;
+}
+
+#gitLink:hover #octoEyes {
+  fill: #6D4C41;
+}
+
+#octoSmile {
+  fill: #595959;
+}
+
+#gitLink:hover #octoSmile {
+  fill: #D84315;
+}
+
+/* Gray scale
+https://www.color-hex.com/color/e0e0e0
+
+SuperDark / Titles: #595959
+Dark: #868686
+Mid-dark: #9c9c9c
+Mid-light: #b3b3b3
+LighterDark: #c9c9c9
+Light: #e0e0e0
+
+*/
